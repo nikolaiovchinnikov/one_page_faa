@@ -3,12 +3,12 @@
         <div class="item" v-for="text in description" >
             <img class="item_img" :src="text.imgUrl" alt="">
             <h2 class="item_title">
-                {{ text.title }}
+                {{ text.title }}<br>
             </h2>
             <h3 class="item_description">
                 {{ text.description }}
             </h3>
-            <a class="item_link" href="">
+            <a class="item_link"  >
                 {{ text.link }}
             </a>
         </div>
@@ -24,8 +24,19 @@
                 type:Array,
                 required: true
             }
+        },
+        
+            
+        
+        
+        methods: {
+            newsInfo (events) {
+                this.$emit("create",events,this)
+                
+            }
         }
     }
+    
 </script>
 
 <style lang="sass">

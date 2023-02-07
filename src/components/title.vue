@@ -1,9 +1,9 @@
 <template>
-    <div class="title">
-        <h2 class="title_header">
+    <div class="caption">
+        <h2 class="caption_header">
             {{ Texts.news }}
         </h2>
-        <a class="title_link" href="">{{ Texts.link }} </a>
+        <a class="caption_link" href="">{{ Texts.link }} </a>
     </div>
 </template>
 
@@ -23,7 +23,7 @@
 
 <style lang="sass">
     @import ../mixins
-    .title
+    .caption
         @include flex_jc_aa_fd(space-between,center,row)
         &_header
             font-weight: 600

@@ -1,11 +1,12 @@
-import button from "@/components/button"
-import input from "@/components/input"
-import nav_bar from "@/components/navbar"
-import logo from "@/components/logo"
+import button from "@/components/button";
+import input from "@/components/input";
+import nav_bar from "@/components/navbar";
+import logo from "@/components/logo";
 import news from "@/components/news";
 import link_title from "@/components/title"
 import events from "@/components/events";
 import result from "@/components/result";
+import titlesImg from "@/components/titlesImg";
 export default [
     button,
     input,
@@ -14,5 +15,6 @@ export default [
     news,
     link_title,
     events,
-    result
+    result,
+    titlesImg
 ]

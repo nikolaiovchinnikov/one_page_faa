@@ -15,17 +15,10 @@
     
     <header class="header">
         <div class="conteiner">
-            <div class="header_title">
-                <h1 class="header_title_main" >
-                    Альпинистское двоеборье:<wbr/>неожиданный финал
-                </h1>
-                <h1 class=" header_title_description">
-                    Также рамки и место обучения кадров позволяет <br> оценить значение направлений прогрессивного развития. 
-                </h1>
-                <faa-btn :name="text.btnText.inFaa"/>
-            </div>
+            <titlesImg :description="text.titlesImg[count]" @nextTarget="nextPage"/>
         </div>
     </header>
+
     <main class="main">
         <div class="conteiner">
             <link_title class="main_content" :Texts="text.titleNews"/>
@@ -36,6 +29,7 @@
             <result class="main_content" :description="text.results" />
         </div>
     </main>
+
     <footer>
         <div class="conteiner">
 
@@ -70,25 +64,6 @@
         position: relative
         height: 500px
         background: linear-gradient(to left,#043656CC, #04365600),linear-gradient( to right,#043656CC, #04365600),center / cover no-repeat url("@/assets/PhotoPlace.jpg")
-        &_title
-            display: flex
-            justify-content: center
-            align-items: flex-start
-            flex-direction: column
-            height: 500px
-            
-            &_main
-                width: 731px
-                height: 121px
-                color: #FFFFFF
-                font-size: 45px
-                font-weight: 700
-            &_description
-                width: 620px
-                height: 57px
-                color: #FFFFFF
-                font-size: 18px
-                font-weight: 400
     .main
         &_content
             margin: 150px 0 0 0
@@ -98,22 +73,22 @@
 
 <script>
  import { text } from "@/textGlobal/text";
+
   export default {
     data() {
-      return { 
+      return {
+        count : 0,
         widthListTextTop:{ width: "555px" },
         widthListTextBottom: { width: "946px" },
         text,
     }
+    
+  },
+  methods: {
+    nextPage (proxy,event) {
+        this.count = event.target.id
+    }
   }
 }
-//     methods: {
-//       addLike() {
-//         this.like++;
-//       },
-//       addDislike() {
-//         this.dislike--;
-//       }
-//   }
-// }
+
 </script>
