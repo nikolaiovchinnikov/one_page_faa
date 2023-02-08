@@ -1,7 +1,7 @@
-<template>
-    <div class="items">
-        <div class="item" v-for="text in description" >
-            <img class="item_img" :src="text.imgUrl" alt="">
+<template >
+    <div class="items" >
+        <div class="item" v-for="text,key in description" >
+                <img class="item_img" :src="text.imgUrl" alt="">
             <h2 class="item_title">
                 {{ text.title }}<br>
             </h2>
@@ -11,6 +11,8 @@
             <a class="item_link"  >
                 {{ text.link }}
             </a>
+            
+            
         </div>
     </div>
     
@@ -20,6 +22,10 @@
     export default {
         name: "news",
         props:{
+            itemCount:{
+                type:Number,
+                required: true
+            },
             description:{
                 type:Array,
                 required: true

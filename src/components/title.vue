@@ -3,7 +3,7 @@
         <h2 class="caption_header">
             {{ Texts.news }}
         </h2>
-        <a class="caption_link" href="">{{ Texts.link }} </a>
+        <a @click="$emit(Texts.id,$event)" class="caption_link" >{{ Texts.link }} </a>
     </div>
 </template>
 
@@ -15,6 +15,11 @@
             Texts:{
                 type:Array,
                 required: true
+            }
+        },
+        methods:{
+            evetnts () {
+
             }
         }
     }
