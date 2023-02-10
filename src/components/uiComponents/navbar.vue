@@ -1,6 +1,12 @@
 <template>
     <div class="nav_menu">
-        <a v-for="text in listTexts">{{ text }}</a>
+        <router-link class="nav_link"
+        v-for="text in listTexts"
+        :to="`${text.url}`"
+        >
+        
+        {{ text.text }}
+        </router-link>
     </div>
     
 </template>
@@ -25,4 +31,7 @@
         @include flex_jc_aa_fd(space-between,center,row)
         font-size: 13px
         font-weight: 600
+        
+    .nav_link
+        color: #389DDD
 </style>
