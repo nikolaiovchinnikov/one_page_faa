@@ -1,5 +1,10 @@
 <template>
-    <a class="come-in-faa ">{{ name }}</a>
+    <router-link 
+    class="come-in-faa" 
+    :to= "{ path: `${name.url}`}" >
+    {{ name.text }}
+    </router-link>
+    <!-- почему нельзя напиать просто  :to="name.url"     ?? -->
 </template>
 
 

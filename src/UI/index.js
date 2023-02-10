@@ -7,7 +7,7 @@ import link_title from "@/components/uiComponents/title"
 import events from "@/components/uiComponents/events";
 import result from "@/components/uiComponents/result";
 import titlesImg from "@/components/uiComponents/titlesImg";
-import myNav from "@/components/mineComponents/myNav"
+import myNav from "@/components/mainComponents/myNav"
 export default [
     myNav,
     button,

@@ -13,7 +13,10 @@ export  const text = {
         'Описания маршрутов'
     ],
     btnText : {
-        inFaa : "Вступить в ФАА"
+        inFaa : {
+            text:"Вступить в ФАА",
+            url:"/authorization"
+        }
     },
     news : [
         {
