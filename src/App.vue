@@ -1,18 +1,10 @@
 <template>
-    <nav class="nav">
-        <div class="conteiner">
-            <div class="nav_top">
-                <logo/>
-                <search/>
-                <nav-bar :style="widthListTextTop" :listTexts="text.textListTwo" />
-            </div>
-            <div class="nav_bottom">
-                <nav-bar :style="widthListTextBottom" :listTexts="text.textListOne" />
-                <faa-btn :name="text.btnText.inFaa"/>
-            </div>
-        </div>
-    </nav>
-    
+    <myNav 
+    :textListTwo = "text.textListTwo"
+    :textListOne = "text.textListOne"
+    :textBtn     = "text.btnText.inFaa"
+    />
+
     <header class="header">
         <div class="conteiner">
             <titlesImg 
@@ -86,29 +78,26 @@
 </style>
 
 <script>
- import { text } from "@/textGlobal/text";
+import { text } from "@/textGlobal/text";
 
-  export default {
+export default {
     data() {
-      return {
-        itemNewsCount: 4,
-        itemResultCount: 3,
-        itemEventCount: 3,
-        count : 0,
-        widthListTextTop:{ width: "555px" },
-        widthListTextBottom: { width: "946px" },
-        text,
-    }
-    
-  },
-  methods: {
-    filters(map,count){
-        return map.filter( (item,idx,arr) => {
-            if ( idx < count ){
-                return arr;
-            }});
+        return {
+            itemNewsCount: 4,
+            itemResultCount: 3,
+            itemEventCount: 3,
+            count : 0,
+            text,
+        }
     },
-  }
+    methods: {
+        filters(map,count){
+            return map.filter( (item,idx,arr) => {
+                if ( idx < count ){
+                    return arr;
+                }
+            });
+        },
+    }
 }
-
 </script>

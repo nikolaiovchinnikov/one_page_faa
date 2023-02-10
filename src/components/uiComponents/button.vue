@@ -21,7 +21,7 @@
 </script>
 
 <style lang="sass">
-    @import ../mixins
+    @import ../../_mixins.sass
     .come-in-faa
         @include flex_jc_aa_fd(center,center,row)
         @include width_height(177px,39px)

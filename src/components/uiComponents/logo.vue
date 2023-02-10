@@ -18,7 +18,7 @@
 </script>
 
 <style lang="sass">
-    @import ../mixins
+    @import ../../_mixins.sass
     .logoFaa
         @include width_height(90px,48px)
         background: center / contain no-repeat url("@/assets/LOGO.png") 

@@ -46,7 +46,7 @@
 </script>
 
 <style lang="sass">
-    @import ../mixins
+    @import ../../_mixins.sass
     .items
         @include flex_jc_aa_fd(space-between,center,row)
         

@@ -39,7 +39,7 @@
  </script>
  
  <style lang="sass">
-     @import ../mixins
+     @import ../../_mixins.sass
      .titles
         display: flex
         justify-content: space-between

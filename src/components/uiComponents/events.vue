@@ -30,7 +30,7 @@
 </script>
 
 <style lang="sass">
-    @import ../mixins
+    @import ../../_mixins.sass
     .events
         @include flex_jc_aa_fd(space-between,center,row)
     .event

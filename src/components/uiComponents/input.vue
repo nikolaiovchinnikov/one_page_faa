@@ -19,7 +19,7 @@
 </script>
 
 <style lang="sass">
-    @import ../mixins
+    @import ../../_mixins.sass
     .search
         @include width_height(433px,39px)
         border: 1px solid rgba(0, 0, 0, 0.1)

@@ -8,7 +8,7 @@
 
 <script>
     export default {
-        name: "nav-bar",
+        name: "nav_bar_text",
         props:{
             listTexts:{
                 type:Array,
@@ -20,7 +20,7 @@
 </script>
 
 <style lang="sass">
-    @import ../mixins
+    @import ../../_mixins.sass
     .nav_menu
         @include flex_jc_aa_fd(space-between,center,row)
         font-size: 13px

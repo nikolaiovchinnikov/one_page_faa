@@ -27,7 +27,7 @@
 </script>
 
 <style lang="sass">
-    @import ../mixins
+    @import ../../_mixins.sass
     .caption
         @include flex_jc_aa_fd(space-between,center,row)
         &_header
