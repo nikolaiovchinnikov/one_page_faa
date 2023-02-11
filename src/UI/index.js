@@ -7,7 +7,9 @@ import link_title from "@/components/uiComponents/title"
 import events from "@/components/uiComponents/events";
 import result from "@/components/uiComponents/result";
 import titlesImg from "@/components/uiComponents/titlesImg";
-import myNav from "@/components/mainComponents/myNav"
+import myNav from "@/components/mainComponents/myNav";
+import myformDate from "@/components/mainComponents/myFormDate";
+
 export default [
     myNav,
     button,
@@ -18,5 +20,6 @@ export default [
     link_title,
     events,
     result,
-    titlesImg
+    titlesImg,
+    myformDate
 ]
