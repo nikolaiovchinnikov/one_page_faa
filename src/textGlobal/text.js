@@ -43,7 +43,14 @@ export  const text = {
         inFaa : {
             text:"Вступить в ФАА",
             url:"/authorization"
+        },
+        formReset : {
+            text: "Сбросить"
+        },
+        formFilter : {
+            text : "Применить фильтр"
         }
+
     },
     news : [
         {

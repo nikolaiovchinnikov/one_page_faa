@@ -1,9 +1,10 @@
 <template>
-    <router-link 
+    <router-link v-if="name.url"
     class="come-in-faa" 
     :to= "{ path: `${name.url}`}" >
     {{ name.text }}
     </router-link>
+    <a v-else class="come-in-faa">{{ name.text }}</a>
     <!-- почему нельзя напиать просто  :to="name.url"     ?? -->
 </template>
 

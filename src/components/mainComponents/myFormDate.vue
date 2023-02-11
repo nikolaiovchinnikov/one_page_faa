@@ -37,16 +37,42 @@
                         <p><input type="checkbox" >2013</p>
                     </div>
                 </div>
+                <div class="month_check_box">
+                    <div class="month_title">
+                        <h2>Месяц</h2>
+                        <a>Выбрать все</a>
+                    </div>
+                    <div class="month_check_box_choice">
+                        <p><input type="checkbox" >Январь</p>
+                        <p><input type="checkbox" >Февраль</p>
+                        <p><input type="checkbox" >Март</p>
+                        <p><input type="checkbox" >Апрель</p>
+                        <p><input type="checkbox" >Май</p>
+                        <p><input type="checkbox" >Июнь</p>
+                        <p><input type="checkbox" >Июль</p>
+                        <p><input type="checkbox" >Август</p>
+                        <p><input type="checkbox" >Сентябрь</p>
+                        <p><input type="checkbox" >Октябрь</p>
+                        <p><input type="checkbox" >Ноябрь</p>
+                        <p><input type="checkbox" >Декабрь</p>
+                    </div>
+                </div>
+                <div>
+                    <faa-btn :name="text.btnText.formReset"/>
+                    <faa-btn :name="text.btnText.formFilter"/>
+                </div>
             </div>
         </form>
 </template>
 
 <script>
+import {text} from "@/textGlobal/text";
 export default {
     name: "myFormDate",
     data() {
         return {
-            State: false
+            State: false,
+            text
         };
     },
     methods: {
@@ -121,6 +147,16 @@ export default {
         display: flex
         justify-content: space-between
     .age_check_box_choice
+        display: flex
+        justify-content: space-between
+    .month_check_box
+        display: flex
+        justify-content: space-between
+        flex-direction: column
+    .month_title
+        display: flex
+        justify-content: space-between
+    .month_check_box_choice
         display: flex
         justify-content: space-between
 </style>
