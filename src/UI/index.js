@@ -9,6 +9,7 @@ import result from "@/components/uiComponents/result";
 import titlesImg from "@/components/uiComponents/titlesImg";
 import myNav from "@/components/mainComponents/myNav";
 import myformDate from "@/components/mainComponents/myFormDate";
+import check_box from "@/components/uiComponents/formUi/checkBox"
 
 export default [
     myNav,
@@ -21,5 +22,6 @@ export default [
     events,
     result,
     titlesImg,
-    myformDate
+    myformDate,
+    check_box
 ]

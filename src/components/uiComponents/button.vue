@@ -1,11 +1,12 @@
 <template>
-    <router-link v-if="name.url"
-    class="come-in-faa" 
-    :to= "{ path: `${name.url}`}" >
-    {{ name.text }}
-    </router-link>
-    <a v-else class="come-in-faa">{{ name.text }}</a>
-    <!-- почему нельзя напиать просто  :to="name.url"     ?? -->
+    <a 
+    v-if="name.url" 
+    class="my-button" 
+    @click="$router.push(name.url)">{{ name.text }}</a>
+
+    <a v-else 
+    class="my-button">{{ name.text }}</a>
+
 </template>
 
 
@@ -14,10 +15,6 @@
         
         name: "faa-btn",
         props:{
-            className:{
-                type:String,
-                required: true
-            },
             name:{
                 type:String,
                 required: true
@@ -26,9 +23,9 @@
     }
 </script>
 
-<style lang="sass">
+<style scoped lang="sass">
     @import ../../_mixins.sass
-    .come-in-faa
+    .my-button
         @include flex_jc_aa_fd(center,center,row)
         @include width_height(177px,39px)
         border: 2px solid #389DDD

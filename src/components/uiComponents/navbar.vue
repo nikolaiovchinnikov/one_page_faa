@@ -4,7 +4,6 @@
         v-for="text in listTexts"
         :to="`${text.url}`"
         >
-        
         {{ text.text }}
         </router-link>
     </div>

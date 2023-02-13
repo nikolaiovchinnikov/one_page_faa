@@ -1,10 +1,10 @@
 <template >
-    <form class="form" action="">
+    <form class="form" action="" >
             <div class="title_top">
                 <h2 class="top_text">
                     Фильтр
                 </h2>
-                <a class="close"></a>
+                <a class="close" @click="close"></a>
             </div>
             <div class="block_date_min_max">
                 <h2 class="min_max_title">
@@ -23,39 +23,21 @@
                         По возрастанию даты
                     </p>
                 </div>
+
                 <div class="age_check_box">
                     <div class="age_title">
                         <h2>Год</h2>
                         <a>Выбрать все</a>
                     </div>
-                    <div class="age_check_box_choice">
-                        <p><input type="checkbox" >2019</p>
-                        <p><input type="checkbox" >2018</p>
-                        <p><input type="checkbox" >2017</p>
-                        <p><input type="checkbox" >2016</p>
-                        <p><input type="checkbox" >2014</p>
-                        <p><input type="checkbox" >2013</p>
-                    </div>
+                    <check-box :texts="listMount"/>
                 </div>
+
                 <div class="month_check_box">
                     <div class="month_title">
                         <h2>Месяц</h2>
                         <a>Выбрать все</a>
                     </div>
-                    <div class="month_check_box_choice">
-                        <p><input type="checkbox" >Январь</p>
-                        <p><input type="checkbox" >Февраль</p>
-                        <p><input type="checkbox" >Март</p>
-                        <p><input type="checkbox" >Апрель</p>
-                        <p><input type="checkbox" >Май</p>
-                        <p><input type="checkbox" >Июнь</p>
-                        <p><input type="checkbox" >Июль</p>
-                        <p><input type="checkbox" >Август</p>
-                        <p><input type="checkbox" >Сентябрь</p>
-                        <p><input type="checkbox" >Октябрь</p>
-                        <p><input type="checkbox" >Ноябрь</p>
-                        <p><input type="checkbox" >Декабрь</p>
-                    </div>
+                    <check-box :texts="listAge"/>
                 </div>
                 <div>
                     <faa-btn :name="text.btnText.formReset"/>
@@ -72,10 +54,16 @@ export default {
     data() {
         return {
             State: false,
-            text
+            text,
+            listMount:["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"],
+            listAge:[2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023]
         };
     },
     methods: {
+        close(e){
+            let elemntForm = e.target.parentElement.parentElement;
+            elemntForm.style.display="none"
+        },
         checkBoxsState(event) {
             this.State = event.target.checked;
             console.log(event.target);
@@ -156,7 +144,5 @@ export default {
     .month_title
         display: flex
         justify-content: space-between
-    .month_check_box_choice
-        display: flex
-        justify-content: space-between
+    
 </style>
