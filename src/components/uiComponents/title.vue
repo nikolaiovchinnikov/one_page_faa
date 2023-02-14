@@ -1,18 +1,18 @@
 <template>
     <div class="caption">
-        <h2 class="caption_header">
-            {{ Texts.news }}
+        <h2 class="text_left">
+            {{ texts.news }}
         </h2>
-        <a @click="$emit(Texts.id,$event)" class="caption_link" >{{ Texts.link }} </a>
+        <a @click="$emit(texts.id,$event)" class="text_right" >{{ texts.link }} </a>
     </div>
 </template>
 
 
 <script>
     export default {
-        name: "link_title",
+        name: "link-title",
         props:{
-            Texts:{
+            texts:{
                 type:Array,
                 required: true
             }
@@ -26,17 +26,17 @@
 
 </script>
 
-<style lang="sass">
+<style scoped lang="sass">
     @import ../../_mixins.sass
     .caption
         @include flex_jc_aa_fd(space-between,center,row)
-        &_header
-            font-weight: 600
-            font-size: 32px
-        &_link
-            font-weight: 600
-            color: #389DDD
-            font-size: 16px
+    .text_left
+        font-weight: 600
+        font-size: 32px
+    .text_right
+        font-weight: 600
+        color: #389DDD
+        font-size: 16px
 
 
 

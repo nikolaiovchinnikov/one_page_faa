@@ -15,22 +15,22 @@
 
     <main class="main">
         <div class="conteiner">
-            <link_title 
+            <link-title 
             @news="this.itemNewsCount = this.text.news.length" 
             class="main_content" 
-            :Texts="text.titleNews"/>
+            :texts="text.titleNews"/>
             <news class="main_content" :description="filters( text.news, itemNewsCount )"/>
 
-            <link_title 
+            <link-title 
             @events="this.itemEventCount = this.text.events.length"
             class="main_content" 
-            :Texts="text.titleEvents"/>
+            :texts="text.titleEvents"/>
             <events class="main_content" :description="filters( text.events, itemEventCount )"/>
 
-            <link_title 
+            <link-title 
             @results="this.itemResultCount = this.text.results.length" 
             class="main_content" 
-            :Texts="text.titleResults"/>
+            :texts="text.titleResults"/>
             <result class="main_content" :description="filters( text.results, itemResultCount )" />
 
         </div>

@@ -25,23 +25,19 @@
                 </div>
 
                 <div class="age_check_box">
-                    <div class="age_title">
-                        <h2>Год</h2>
-                        <a>Выбрать все</a>
-                    </div>
-                    <check-box :texts="listMount"/>
+                    <link-title 
+                    :texts="text.formTitleAge"
+                    @click="stateAge = true"/>
+                    <check-box :state="stateAge" :texts="listMount"/>
                 </div>
 
                 <div class="month_check_box">
-                    <div class="month_title">
-                        <h2>Месяц</h2>
-                        <a>Выбрать все</a>
-                    </div>
-                    <check-box :texts="listAge"/>
+                    <link-title @click="stateMonth = true" :texts="text.formTitleMonth"/>
+                    <check-box :state="stateMonth" :texts="listAge"/>
                 </div>
                 <div>
-                    <faa-btn :name="text.btnText.formReset"/>
-                    <faa-btn :name="text.btnText.formFilter"/>
+                    <my-btn :text="text.btnText.formReset"/>
+                    <my-btn :text="text.btnText.formFilter"/>
                 </div>
             </div>
         </form>
@@ -53,6 +49,8 @@ export default {
     name: "myFormDate",
     data() {
         return {
+            stateMonth: false,
+            stateAge: false,
             State: false,
             text,
             listMount:["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"],
@@ -61,8 +59,7 @@ export default {
     },
     methods: {
         close(e){
-            let elemntForm = e.target.parentElement.parentElement;
-            elemntForm.style.display="none"
+            this.$emit("close",e)
         },
         checkBoxsState(event) {
             this.State = event.target.checked;
@@ -76,6 +73,8 @@ export default {
 
 <style scoped lang="sass">
     .form
+        background-color: #fff
+        position: absolute
         width: 627px
         height: 727px
     .title_top

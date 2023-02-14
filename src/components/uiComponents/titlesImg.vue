@@ -7,7 +7,8 @@
             <h1 class="title_description">
                 {{ description.titleParagraph }}
             </h1>
-            <faa-btn :name="description.btnText"/>
+            <my-btn class="variant_1" :text="description.btnText"/>
+            
         </div>
         
         <div class="title_block">

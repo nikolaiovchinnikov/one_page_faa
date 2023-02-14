@@ -22,19 +22,11 @@
     export default {
         name: "news",
         props:{
-            itemCount:{
-                type:Number,
-                required: true
-            },
             description:{
                 type:Array,
                 required: true
             }
         },
-        
-            
-        
-        
         methods: {
             newsInfo (events) {
                 this.$emit("create",events,this)

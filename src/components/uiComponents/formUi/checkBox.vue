@@ -1,7 +1,13 @@
 <template >
     <div class="box_items">
-        <div v-for="text in texts" :key="text" class="box_item"  @click="event">
-            <div class="selectImg"></div>
+        <div v-for="text in texts" 
+        :key="text" class="box_item"  
+        @click="event" 
+        :style="state? 'color : rgb(56, 157, 221)':'color :#000'">
+            <div 
+            class="selectImg"
+            :style="state? 'opacity:1':'opacity:0'"
+            ></div>
             <input class="selectDefolt"
             type="checkbox">
             {{text}}
@@ -14,12 +20,15 @@ export default {
     name:"check-box",
     data() {
         return {
-            
         }
     },
     props:{
         texts:{
             type:Array,
+            required: true
+        },
+        state:{
+            type:Boolean,
             required: true
         }
     },

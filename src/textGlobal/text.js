@@ -118,6 +118,16 @@ export  const text = {
         news: "Результаты соревнований",
         link: "Все результаты"
     },
+    formTitleMonth:{
+        id: "month",
+        news: "месяц",
+        link: "Выбрать все"
+    },
+    formTitleAge:{
+        id: "age",
+        news: "Год",
+        link: "Выбрать все"
+    },
     events : [
         {
         imgLink: "img/image.jpg",
@@ -196,22 +206,30 @@ export  const text = {
     ],
     titlesImg: [
         {
-        btnText: "Узнать подробнее",
+        btnText:{
+            text:"Узнать подробнее"
+        },
         titleText: "Альпинистское двоеборье:неожиданный финал ",
         titleParagraph: "Также рамки и место обучения кадров позволяет оценить значение направлений прогрессивного развития. "
         },
         {
-        btnText: "Узнать подробнее",
+        btnText:{
+            text:"Узнать подробнее"
+        },
         titleText: "ЧМ по Альпинизму Ожидаемый финал  ",
         titleParagraph: "В финал вошла тройка лучших спортсменов . "
         },
         {
-        btnText: "Узнать подробнее",
+        btnText:{
+            text:"Узнать подробнее"
+        },
         titleText: "Зимний утс  ",
         titleParagraph: "Повышение опыта и квалификации спортсменов . "
         },
         {
-        btnText: "Узнать подробнее",
+        btnText:{
+            text:"Узнать подробнее"
+        },
         titleText: "Экспедиция в Сайрам  ",
         titleParagraph: "Первопроход по СЗ стене пика Сайрам. "
         },

@@ -12,7 +12,7 @@
                 <nav_bar_text 
                 :style     = "widthListTextBottom" 
                 :listTexts = "textListOne"/>
-                <faa-btn :name="textBtn"/>
+                <my-btn :text="textBtn"/>
             </div>
         </div>
     </nav>
